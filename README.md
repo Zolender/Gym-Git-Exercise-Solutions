@@ -1,5 +1,5 @@
 # Gym-Git-Exercise-Solutions
-## Exercise_1
+## Bundle_1
    - Renaming the git branch from master to main:
        * git branch -m  master main
    - Staging the files:
@@ -21,4 +21,6 @@
    - Deleting the "test" branch
         * git checkout dev
         * git branch -d test
-
+   - Stashing the new change to the repository
+        * git add home.html
+        * git stash -m "Stashing the home.html file"
