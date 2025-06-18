@@ -21,6 +21,16 @@
    - Deleting the "test" branch
         * git checkout dev
         * git branch -d test
-   - Stashing the new change to the repository
+   - Stashing the new changes to the repository
         * git add home.html
         * git stash -m "Stashing the home.html file"
+        * git add about.html
+        * git stash -m "Stashing the about.html file"
+        * git add team.html
+        * git stash -m "Stashing the team.html file"
+   - Stash popping the most recent changes
+        * git stash pop
+   - Using index, stash popping the old stashed file(before I added new ones)
+        * git stash list
+        * git stash pop 0
+         
