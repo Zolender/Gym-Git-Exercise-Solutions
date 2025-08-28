@@ -34,3 +34,12 @@
         * git stash list
         * git stash pop 0
          
+## Bundle_2
+     - Creating a new branch ft/bundle-2
+          * git branch ft/bundle-2
+          * git checkout ft/bundle-2
+     - Commiting the changes and then making a pull request to the main branch
+          * git add .
+          * git commit -m"first commit"
+          * git push origin ft/bundle-2
+          * git pull origin main
