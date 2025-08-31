@@ -563,3 +563,57 @@ remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/Zolender/Exercises.git
    ca37faa..14a6785  ft/faq-page -> ft/faq-page
 ```
+
+## Exercise 2
+```bash
+ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"update the home page
+>> "
+[main 259ec50] update the home page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Zolender/Exercises.git
+   3b7cbf0..259ec50  main -> main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"update the home page"
+[ft/home-page-redesign 58ca20f] update the home page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/home-page-redesign
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 2.00 KiB | 93.00 KiB/s, done.
+Total 18 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
