@@ -657,3 +657,103 @@ remote: Resolving deltas: 100% (11/11), done.
 To https://github.com/Zolender/Exercise2.git
  * [new branch]      main -> main
 ```
+
+## Exercise 2
+
+```bash
+git switch -c ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"add a footer to the home page"
+[ft/footer b192647] add a footer to the home page
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"add more changes to the home page's footer"
+[ft/footer b42968e] add more changes to the home page's footer
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+* ft/footer
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin footer
+error: src refspec footer does not match any
+error: failed to push some refs to 'https://github.com/Zolender/Exercises.git'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 649 bytes | 108.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/footer
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/footer -> ft/footer
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git merge --squash ft/footer
+Updating 40cd25a..b42968e
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log --oneline
+40cd25a (HEAD -> ft/squashing, origin/main, origin/HEAD, git-copy/main, main) updated the home page
+259ec50 update the home page
+3b7cbf0 change the main title of the services page
+2e7ec72 add new services to the service page
+d322785 Merge pull request #1 from Zolender/ft/bundle-2
+a9327af (origin/ft/bundle-2, ft/bundle-2) create a services page
+0e75b64 (origin/dev, dev) Save the about and home pages
+ba19dec Add the basics files index.html and styles.css in the repository
+a9f7997 first commit
+a468aa8 clean up the repository
+cc9b523 Merge branch 'main' of https://github.com/Zolender/Exercises First merge operation.
+2400df8 Initial commit
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m "add a footer to the home page"
+
+[ft/squashing 5919388] add a footer to the home page
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit --amend -m"footer changes squashing"
+[ft/squashing af8472d] footer changes squashing
+ Date: Sun Aug 31 21:11:29 2025 +0200
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch 
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/footer
+  ft/home-page-redesign
+  ft/service-redesign
+* ft/squashing
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 399 bytes | 133.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/squashing
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
