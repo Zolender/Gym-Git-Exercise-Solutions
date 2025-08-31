@@ -139,3 +139,132 @@ To https://github.com/Zolender/Exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+## Exercise 2
+```bash PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git pull origin main
+From https://github.com/Zolender/Exercises
+ * branch            main       -> FETCH_HEAD
+Updating a9f7997..d322785
+Fast-forward
+ about.html    | 11 +++++++++++
+ home.html     | 11 +++++++++++
+ services.html | 11 +++++++++++
+ 3 files changed, 33 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\services.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"modify the services page"
+[ft/service-redesign f4cff1e] modify the services page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 327 bytes | 163.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\services.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"add new services to the service page
+>> "
+[main 2e7ec72] add new services to the service page
+ 1 file changed, 5 insertions(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Zolender/Exercises.git
+   d322785..2e7ec72  main -> main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\services.html                      
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"change the main title of the services page"
+[main 3b7cbf0] change the main title of the services page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin main                         
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Zolender/Exercises.git
+   2e7ec72..3b7cbf0  main -> main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch
+  dev
+  ft/bundle-2
+* ft/service-redesign
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git diff main ft/service-redesign
+diff --git a/services.html b/services.html
+index 7247d25..ed773cc 100644
+--- a/services.html
++++ b/services.html
+@@ -6,11 +6,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    <h1>Hello Dear Customer. Here is a list of the services we provide</h1>
+-    <ol>
+-        <li>Cooking</li>
+-        <li>Laundry</li>
+-        <li>Massage</li>
+-    </ol>
++    <h1>Hey dearest. Here are the services our company offer</h1>
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"merge the changes from main to this branch"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"merge the changes from main to this branch"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push
+Everything up-to-date
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 237 bytes | 237.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Zolender/Exercises.git
+   f4cff1e..e8c2953  ft/service-redesign -> ft/service-redesign
+```
