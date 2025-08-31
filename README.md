@@ -268,3 +268,298 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Zolender/Exercises.git
    f4cff1e..e8c2953  ft/service-redesign -> ft/service-redesign
 ```
+
+### Bundle 3
+## Exercise 1
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"create a team page"
+[ft/team-page 581ae69] create a team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 439 bytes | 146.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/team-page
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log --oneline
+581ae69 (HEAD -> ft/team-page, origin/ft/team-page) create a team page
+3b7cbf0 (origin/main, origin/HEAD, main, ft/contact-page) change the main title of the services page
+2e7ec72 add new services to the service page
+d322785 Merge pull request #1 from Zolender/ft/bundle-2
+a9327af (origin/ft/bundle-2, ft/bundle-2) create a services page
+0e75b64 (origin/dev, dev) Save the about and home pages
+ba19dec Add the basics files index.html and styles.css in the repository
+a9f7997 first commit
+a468aa8 clean up the repository
+cc9b523 Merge branch 'main' of https://github.com/Zolender/Exercises First merge operation.
+2400df8 Initial commit
+54f02eb Initializing the repository adding two files(simple website), renaming the branch to master
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git cherry-pick 581ae69                      
+[ft/contact-page 4ce43e2] create a team page
+ Date: Sun Aug 31 07:35:16 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"add new changes to the team page"
+[ft/contact-page b6d2b4a] add new changes to the team page
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 728 bytes | 728.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch
+  dev
+  ft/bundle-2
+* ft/contact-page
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git switch -c ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\faq.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"create a frequently asked questions page"
+[ft/faq-page ca37faa] create a frequently asked questions page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 526 bytes | 526.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log ft/team-page
+commit 581ae692e9e6da60fce733092f57b363e2e14a15 (origin/ft/team-page, ft/team-page)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 07:35:16 2025 +0200
+
+    create a team page
+
+commit 3b7cbf0b6d973d86f0cca8871343522b90e3683e (origin/main, origin/HEAD, main)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 07:10:17 2025 +0200
+
+    change the main title of the services page
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 581ae692e9e6da60fce733092f57b363e2e14a15
+CONFLICT (modify/delete): team.html deleted in parent of 581ae69 (create a team page) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 581ae69... create a team page
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+team.html: needs merge
+error: you need to resolve your current index first
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert --abort
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"update the team page"
+[ft/team-page a3aed40] update the team page
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log ft/team-page
+commit a3aed406eb22df04012c28a7458bbb21a8e9849c (ft/team-page)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 07:59:00 2025 +0200
+
+    update the team page
+
+commit 581ae692e9e6da60fce733092f57b363e2e14a15 (origin/ft/team-page)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 07:35:16 2025 +0200
+
+    create a team page
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 581ae692e9e6da60fce733092f57b363e2e14a15
+CONFLICT (modify/delete): team.html deleted in parent of 581ae69 (create a team page) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 581ae69... create a team page
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert --abort
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"update the team page"
+[ft/faq-page 636d844] update the team page
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 581ae692e9e6da60fce733092f57b363e2e14a15
+CONFLICT (modify/delete): team.html deleted in parent of 581ae69 (create a team page) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 581ae69... create a team page
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert --abort
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page                     
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Already on 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page 
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page 
+error: Your local changes to the following files would be overwritten by checkout:
+        team.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+M       team.html
+Already on 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\team.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"update the team page"
+[ft/team-page 6b07c2d] update the team page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page 
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log ft/team-page 
+commit 6b07c2d94f6e9946bdab668d29549929c760dc8b (ft/team-page)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 08:06:44 2025 +0200
+
+    update the team page
+
+commit a3aed406eb22df04012c28a7458bbb21a8e9849c
+Author: Zolender <ndeingare@gmail.com>
+Date:   Sun Aug 31 07:59:00 2025 +0200
+
+    update the team page
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log --oneline
+636d844 (HEAD -> ft/faq-page) update the team page
+ca37faa (origin/ft/faq-page) create a frequently asked questions page
+b6d2b4a (origin/ft/contact-page, ft/contact-page) add new changes to the team page
+4ce43e2 create a team page
+3b7cbf0 (origin/main, origin/HEAD, main) change the main title of the services page
+2e7ec72 add new services to the service page
+d322785 Merge pull request #1 from Zolender/ft/bundle-2
+a9327af (origin/ft/bundle-2, ft/bundle-2) create a services page
+0e75b64 (origin/dev, dev) Save the about and home pages
+ba19dec Add the basics files index.html and styles.css in the repository
+a9f7997 first commit
+a468aa8 clean up the repository
+cc9b523 Merge branch 'main' of https://github.com/Zolender/Exercises First merge operation.
+2400df8 Initial commit
+54f02eb Initializing the repository adding two files(simple website), renaming the branch to master
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git log --oneline
+6b07c2d (HEAD -> ft/team-page) update the team page
+a3aed40 update the team page
+581ae69 (origin/ft/team-page) create a team page
+3b7cbf0 (origin/main, origin/HEAD, main) change the main title of the services page
+2e7ec72 add new services to the service page
+d322785 Merge pull request #1 from Zolender/ft/bundle-2
+a9327af (origin/ft/bundle-2, ft/bundle-2) create a services page
+0e75b64 (origin/dev, dev) Save the about and home pages
+ba19dec Add the basics files index.html and styles.css in the repository
+a9f7997 first commit
+a468aa8 clean up the repository
+cc9b523 Merge branch 'main' of https://github.com/Zolender/Exercises First merge operation.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout ft/faq-page 
+Switched to branch 'ft/faq-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 581ae69
+CONFLICT (modify/delete): team.html deleted in parent of 581ae69 (create a team page) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert 581ae69... create a team page
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 6b07c2d
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert --abort
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git revert 6b07c2d
+[ft/faq-page 14a6785] Revert "update the team page"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin ft/faq-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 617 bytes | 205.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/Zolender/Exercises.git
+   ca37faa..14a6785  ft/faq-page -> ft/faq-page
+```
