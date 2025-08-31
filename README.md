@@ -617,3 +617,43 @@ remote:
 To https://github.com/Zolender/Exercises.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+
+### Bundle 4
+
+## Exercise 1
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git remote add git-copy https://github.com/Zolender/Exercise2.git
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git remote -v
+git-copy        https://github.com/Zolender/Exercise2.git (fetch)
+git-copy        https://github.com/Zolender/Exercise2.git (push)
+origin  https://github.com/Zolender/Exercises.git (fetch)
+origin  https://github.com/Zolender/Exercises.git (push)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git add .\home.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git commit -m"updated the home page"
+[main 40cd25a] updated the home page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Zolender/Exercises.git
+   259ec50..40cd25a  main -> main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git push git-copy main
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (36/36), 5.75 KiB | 190.00 KiB/s, done.
+Total 36 (delta 11), reused 9 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (11/11), done.
+To https://github.com/Zolender/Exercise2.git
+ * [new branch]      main -> main
+```
