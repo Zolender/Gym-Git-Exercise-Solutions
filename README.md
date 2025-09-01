@@ -802,3 +802,21 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git bas
 remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
 fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
 ```
+
+### Bundle 6
+## Exercise 1
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git switch -c ft/menu
+Switched to a new branch 'ft/menu'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git add .\Menu.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git commit -m"create a new menu page"
+[ft/menu b2b9dcb] create a new menu page
+ 1 file changed, 19 insertions(+)
+ create mode 100644 Menu.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git status
+On branch ft/menu
+nothing to commit, working tree clean
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git push origin ft/menu    
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+```
