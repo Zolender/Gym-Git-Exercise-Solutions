@@ -757,3 +757,48 @@ remote:
 To https://github.com/Zolender/Exercises.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+### Bundle 5
+
+## Exercise 1
+     - Done in Github
+
+## Exercise 2
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git clone https://github.com/TheGymRwanda/git-cafe-exercise.git
+To https://github.com/Zolender/Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> git clone https://github.com/TheGymRwanda/git-cafe-exercise.git
+-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 2.70 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises> cd .\git-cafe-exercise\
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git add .\index.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git commit -m"Updated the title of the index page"
+[main 0ced733] Updated the title of the index page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git push
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git switch -c ft/change-title
+Switched to a new branch 'ft/change-title'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git log --oneline
+0ced733 (HEAD -> ft/change-title, main) Updated the title of the index page
+d1d3f9c (origin/main, origin/HEAD) Create README.md
+659c868 first commit
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git push origin ft/change-title
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git push -u origin main    
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+```
