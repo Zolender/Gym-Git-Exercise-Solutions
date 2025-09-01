@@ -820,3 +820,27 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git bas
 remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
 fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
 ```
+
+## Exercise 2
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git switch -c bug-fix
+Switched to a new branch 'bug-fix'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git add .\index-4.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git commit -m"change the index-4 page title from menu to Contact "
+[bug-fix 549e784] change the index-4 page title from menu to Contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ git push origin bug-fix
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+```
+
+## Exercise 3
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git add .\index-4.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git commit -m"update the tel number"
+[bug-fix 21e63ca] update the tel number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git basics\Exercises\git-cafe-exercise> git push origin bug-fix    
+remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
+fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
+```
