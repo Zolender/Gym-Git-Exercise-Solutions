@@ -844,3 +844,49 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\git bas
 remote: Permission to TheGymRwanda/git-cafe-exercise.git denied to Zolender.
 fatal: unable to access 'https://github.com/TheGymRwanda/git-cafe-exercise.git/': The requested URL returned error: 403
 ```
+
+
+
+
+
+
+
+### Git Advanced Exercises: Part 1
+## Missing File Fix
+```bash 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log
+commit 298533a6b63fc71346ba983829bc452353429f46 (HEAD -> main)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Tue Sep 2 07:47:43 2025 +0200
+
+    chore: Create third file and fourth files
+
+commit 991870dde64648c27a3b2e9be3bf3b0575ca330d
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+298533a (HEAD -> main) chore: Create third file and fourth files
+991870d chore: Create another file
+227e781 chore: Create initial file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\test4.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit --amend -m "Create thrid and fourth files"
+
+[main 477dcc1] Create thrid and fourth files
+ Date: Tue Sep 2 07:47:43 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+477dcc1 (HEAD -> main) Create thrid and fourth files
+991870d chore: Create another file
+227e781 chore: Create initial file
+```
