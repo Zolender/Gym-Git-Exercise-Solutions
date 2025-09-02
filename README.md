@@ -909,3 +909,17 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 fcf1a5d chore: Create second file
 227e781 chore: Create initial file
 ```
+
+## Keeping History Tidy
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase -i --root
+[detached HEAD cf8886a] Create initial and Second file
+ Date: Tue Sep 2 07:45:44 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+f36f6ec (HEAD -> main) Create thrid and fourth files
+cf8886a Create initial and Second file
+``` 
