@@ -963,3 +963,16 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 ad65bde (HEAD -> main) Create third and fourth files
 cf8886a Create initial and Second file
 ```
+## Dropping a Commit
+```bash
+git add .\unwanted.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"Unwanted commit"
+[main 16ddb8c] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase -i HEAD~1
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+ad65bde (HEAD -> main) Create third and fourth files
+cf8886a Create initial and Second file
+```
