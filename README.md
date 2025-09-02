@@ -945,3 +945,21 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 3c7db25 Create third file
 cf8886a Create initial and Second file
 ```
+
+## Advanced Squashing
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+3481b7c (HEAD -> main) Create fourth file
+3c7db25 Create third file
+cf8886a Create initial and Second file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase -i cf8886a
+[detached HEAD ad65bde] Create third and fourth files
+ Date: Tue Sep 2 10:07:25 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+ad65bde (HEAD -> main) Create third and fourth files
+cf8886a Create initial and Second file
+```
