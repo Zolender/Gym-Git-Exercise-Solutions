@@ -923,3 +923,25 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 f36f6ec (HEAD -> main) Create thrid and fourth files
 cf8886a Create initial and Second file
 ``` 
+
+## Splitting a Commit
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+f36f6ec (HEAD -> main) Create thrid and fourth files
+cf8886a Create initial and Second file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git reset HEAD~1
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\test3.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m "Create third file"
+[main 3c7db25] Create third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\test4.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m "Create fourth file"
+[main 3481b7c] Create fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+3481b7c (HEAD -> main) Create fourth file
+3c7db25 Create third file
+cf8886a Create initial and Second file
+```
