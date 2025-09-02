@@ -1018,3 +1018,34 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 98fa211 Create initial and Second file
 9c06514 Create third and fourth files
 ```
+
+## Visualizing Commit History
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --graph
+* commit 4bfcd4a2ee0b67b630364564468a1ee7d058ba15 (HEAD -> main)
+| Author: Zolender <ndeingare@gmail.com>
+| Date:   Tue Sep 2 10:27:28 2025 +0200
+|
+|     Implemented test 5
+|
+* commit 98fa211818ec4511e2d9baab5b58ed70a3251a33
+:...skipping...
+* commit 4bfcd4a2ee0b67b630364564468a1ee7d058ba15 (HEAD -> main)
+| Author: Zolender <ndeingare@gmail.com>
+| Date:   Tue Sep 2 10:27:28 2025 +0200
+| 
+|     Implemented test 5
+| 
+* commit 98fa211818ec4511e2d9baab5b58ed70a3251a33
+| Author: Zolender <ndeingare@gmail.com>
+| Date:   Tue Sep 2 07:45:44 2025 +0200
+| 
+|     Create initial and Second file
+| 
+* commit 9c0651430113d463d54a8722b56e8320533266b3
+  Author: Zolender <ndeingare@gmail.com>
+  Date:   Tue Sep 2 10:07:25 2025 +0200
+  
+      Create third and fourth files
+
+```
