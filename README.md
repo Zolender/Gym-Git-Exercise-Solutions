@@ -976,3 +976,14 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 ad65bde (HEAD -> main) Create third and fourth files
 cf8886a Create initial and Second file
 ```
+## Reodering Commits
+```bash 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+ad65bde (HEAD -> main) Create third and fourth files
+cf8886a Create initial and Second file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase -i --root
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+98fa211 (HEAD -> main) Create initial and Second file
+9c06514 Create third and fourth files
+```
