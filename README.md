@@ -1049,3 +1049,183 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
       Create third and fourth files
 
 ```
+
+## Understanding Reflogs
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git reflog
+4bfcd4a (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+98fa211 HEAD@{1}: checkout: moving from ft/branch to main
+5c8076c (ft/branch) HEAD@{2}: commit: Implemented test 5
+98fa211 HEAD@{3}: checkout: moving from main to ft/branch
+98fa211 HEAD@{4}: rebase (finish): returning to refs/heads/main
+98fa211 HEAD@{5}: rebase (pick): Create initial and Second file
+9c06514 HEAD@{6}: rebase (pick): Create third and fourth files
+:...skipping...
+4bfcd4a (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+98fa211 HEAD@{1}: checkout: moving from ft/branch to main
+5c8076c (ft/branch) HEAD@{2}: commit: Implemented test 5
+98fa211 HEAD@{3}: checkout: moving from main to ft/branch
+98fa211 HEAD@{4}: rebase (finish): returning to refs/heads/main
+98fa211 HEAD@{5}: rebase (pick): Create initial and Second file
+9c06514 HEAD@{6}: rebase (pick): Create third and fourth files
+5e65bd8 HEAD@{7}: rebase (start): checkout 5e65bd80924ca797c7315a8a59ecee894af9d843
+ad65bde HEAD@{8}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{9}: rebase: fast-forward
+cf8886a HEAD@{10}: rebase: fast-forward
+254629c HEAD@{11}: rebase (start): checkout 254629c77b51c568e8fa4164c06d1e5c71e9fd1e
+ad65bde HEAD@{12}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{13}: rebase (start): checkout HEAD~1
+16ddb8c HEAD@{14}: commit: Unwanted commit
+ad65bde HEAD@{15}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{16}: rebase (squash): Create third and fourth files
+3c7db25 HEAD@{17}: rebase (start): checkout cf8886a
+3481b7c HEAD@{18}: commit: Create fourth file
+3c7db25 HEAD@{19}: commit: Create third file
+cf8886a HEAD@{20}: reset: moving to HEAD~1
+f36f6ec HEAD@{21}: rebase (finish): returning to refs/heads/main
+f36f6ec HEAD@{22}: rebase (pick): Create thrid and fourth files
+cf8886a HEAD@{23}: rebase (squash): Create initial and Second file
+227e781 HEAD@{24}: rebase: fast-forward
+e0d6f5f HEAD@{25}: rebase (start): checkout e0d6f5f2ba5e3f539b8e13fdc9dc109fc953434c
+2342d2b HEAD@{26}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{27}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{28}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{29}: rebase (start): checkout HEAD~2
+2342d2b HEAD@{30}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{31}: rebase (pick): Create thrid and fourth files
+fcf1a5d HEAD@{32}: rebase (reword): chore: Create second file
+991870d HEAD@{33}: rebase: fast-forward
+227e781 HEAD@{34}: rebase (start): checkout HEAD~2
+e1f23ed HEAD@{35}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{36}: rebase (start): checkout HEAD
+e1f23ed HEAD@{37}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{38}: rebase (start): checkout HEAD~1
+e1f23ed HEAD@{39}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{40}: rebase (reword): Create thrid and fourth files
+477dcc1 HEAD@{41}: rebase: fast-forward
+991870d HEAD@{42}: rebase (start): checkout HEAD~1
+477dcc1 HEAD@{43}: commit (amend): Create thrid and fourth files
+298533a HEAD@{44}: commit: chore: Create third file and fourth files
+991870d HEAD@{45}: commit: chore: Create another file
+227e781 HEAD@{46}: commit (amend): chore: Create initial file
+9ad0fa5 HEAD@{47}: commit (initial): chore: create initial file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git reflog --oneline
+4bfcd4a (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+98fa211 HEAD@{1}: checkout: moving from ft/branch to main
+5c8076c (ft/branch) HEAD@{2}: commit: Implemented test 5
+98fa211 HEAD@{3}: checkout: moving from main to ft/branch
+98fa211 HEAD@{4}: rebase (finish): returning to refs/heads/main
+98fa211 HEAD@{5}: rebase (pick): Create initial and Second file
+9c06514 HEAD@{6}: rebase (pick): Create third and fourth files
+5e65bd8 HEAD@{7}: rebase (start): checkout 5e65bd80924ca797c7315a8a59ecee894af9d843
+ad65bde HEAD@{8}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{9}: rebase: fast-forward
+cf8886a HEAD@{10}: rebase: fast-forward
+254629c HEAD@{11}: rebase (start): checkout 254629c77b51c568e8fa4164c06d1e5c71e9fd1e
+ad65bde HEAD@{12}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{13}: rebase (start): checkout HEAD~1
+16ddb8c HEAD@{14}: commit: Unwanted commit
+ad65bde HEAD@{15}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{16}: rebase (squash): Create third and fourth files
+3c7db25 HEAD@{17}: rebase (start): checkout cf8886a
+3481b7c HEAD@{18}: commit: Create fourth file
+3c7db25 HEAD@{19}: commit: Create third file
+cf8886a HEAD@{20}: reset: moving to HEAD~1
+f36f6ec HEAD@{21}: rebase (finish): returning to refs/heads/main
+f36f6ec HEAD@{22}: rebase (pick): Create thrid and fourth files
+cf8886a HEAD@{23}: rebase (squash): Create initial and Second file
+227e781 HEAD@{24}: rebase: fast-forward
+e0d6f5f HEAD@{25}: rebase (start): checkout e0d6f5f2ba5e3f539b8e13fdc9dc109fc953434c
+2342d2b HEAD@{26}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{27}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{28}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{29}: rebase (start): checkout HEAD~2
+2342d2b HEAD@{30}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{31}: rebase (pick): Create thrid and fourth files
+fcf1a5d HEAD@{32}: rebase (reword): chore: Create second file
+991870d HEAD@{33}: rebase: fast-forward
+227e781 HEAD@{34}: rebase (start): checkout HEAD~2
+e1f23ed HEAD@{35}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{36}: rebase (start): checkout HEAD
+e1f23ed HEAD@{37}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{38}: rebase (start): checkout HEAD~1
+e1f23ed HEAD@{39}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{40}: rebase (reword): Create thrid and fourth files
+477dcc1 HEAD@{41}: rebase: fast-forward
+991870d HEAD@{42}: rebase (start): checkout HEAD~1
+477dcc1 HEAD@{43}: commit (amend): Create thrid and fourth files
+298533a HEAD@{44}: commit: chore: Create third file and fourth files
+991870d HEAD@{45}: commit: chore: Create another file
+227e781 HEAD@{46}: commit (amend): chore: Create initial file
+9ad0fa5 HEAD@{47}: commit (initial): chore: create initial file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git reflog show ft/branch
+5c8076c (ft/branch) ft/branch@{0}: commit: Implemented test 5
+98fa211 ft/branch@{1}: branch: Created from HEAD
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git reflog --all
+4bfcd4a (HEAD -> main) refs/heads/main@{0}: cherry-pick: Implemented test 5
+4bfcd4a (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+98fa211 HEAD@{1}: checkout: moving from ft/branch to main
+5c8076c (ft/branch) refs/heads/ft/branch@{0}: commit: Implemented test 5
+5c8076c (ft/branch) HEAD@{2}: commit: Implemented test 5
+98fa211 refs/heads/ft/branch@{1}: branch: Created from HEAD
+98fa211 HEAD@{3}: checkout: moving from main to ft/branch
+98fa211 refs/heads/main@{1}: rebase (finish): refs/heads/main onto 5e65bd80924ca797c7315a8a59ecee894af9d843
+98fa211 HEAD@{4}: rebase (finish): returning to refs/heads/main
+98fa211 HEAD@{5}: rebase (pick): Create initial and Second file
+9c06514 HEAD@{6}: rebase (pick): Create third and fourth files
+5e65bd8 HEAD@{7}: rebase (start): checkout 5e65bd80924ca797c7315a8a59ecee894af9d843
+ad65bde HEAD@{8}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{9}: rebase: fast-forward
+cf8886a HEAD@{10}: rebase: fast-forward
+254629c HEAD@{11}: rebase (start): checkout 254629c77b51c568e8fa4164c06d1e5c71e9fd1e
+ad65bde refs/heads/main@{2}: rebase (finish): refs/heads/main onto ad65bdee7118fcd35416ad05411e4fb81c341201
+ad65bde HEAD@{12}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{13}: rebase (start): checkout HEAD~1
+16ddb8c refs/heads/main@{3}: commit: Unwanted commit
+16ddb8c HEAD@{14}: commit: Unwanted commit
+ad65bde refs/heads/main@{4}: rebase (finish): refs/heads/main onto cf8886a8652e7d02524f78a6505419c53bb2c9d3
+ad65bde HEAD@{15}: rebase (finish): returning to refs/heads/main
+ad65bde HEAD@{16}: rebase (squash): Create third and fourth files
+3c7db25 HEAD@{17}: rebase (start): checkout cf8886a
+3481b7c refs/heads/main@{5}: commit: Create fourth file
+3481b7c HEAD@{18}: commit: Create fourth file
+3c7db25 refs/heads/main@{6}: commit: Create third file
+3c7db25 HEAD@{19}: commit: Create third file
+cf8886a refs/heads/main@{7}: reset: moving to HEAD~1
+cf8886a HEAD@{20}: reset: moving to HEAD~1
+f36f6ec refs/heads/main@{8}: rebase (finish): refs/heads/main onto e0d6f5f2ba5e3f539b8e13fdc9dc109fc953434c
+f36f6ec HEAD@{21}: rebase (finish): returning to refs/heads/main
+f36f6ec HEAD@{22}: rebase (pick): Create thrid and fourth files
+cf8886a HEAD@{23}: rebase (squash): Create initial and Second file
+227e781 HEAD@{24}: rebase: fast-forward
+e0d6f5f HEAD@{25}: rebase (start): checkout e0d6f5f2ba5e3f539b8e13fdc9dc109fc953434c
+2342d2b HEAD@{26}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{27}: rebase (abort): returning to refs/heads/main
+2342d2b HEAD@{28}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{29}: rebase (start): checkout HEAD~2
+2342d2b refs/heads/main@{9}: rebase (finish): refs/heads/main onto 227e7812564237393fc6d1574aaf9e0da9f6acd7
+2342d2b HEAD@{30}: rebase (finish): returning to refs/heads/main
+2342d2b HEAD@{31}: rebase (pick): Create thrid and fourth files
+fcf1a5d HEAD@{32}: rebase (reword): chore: Create second file
+991870d HEAD@{33}: rebase: fast-forward
+227e781 HEAD@{34}: rebase (start): checkout HEAD~2
+e1f23ed HEAD@{35}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{36}: rebase (start): checkout HEAD
+e1f23ed HEAD@{37}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{38}: rebase (start): checkout HEAD~1
+e1f23ed refs/heads/main@{10}: rebase (finish): refs/heads/main onto 991870dde64648c27a3b2e9be3bf3b0575ca330d
+e1f23ed HEAD@{39}: rebase (finish): returning to refs/heads/main
+e1f23ed HEAD@{40}: rebase (reword): Create thrid and fourth files
+477dcc1 HEAD@{41}: rebase: fast-forward
+991870d HEAD@{42}: rebase (start): checkout HEAD~1
+477dcc1 refs/heads/main@{11}: commit (amend): Create thrid and fourth files
+477dcc1 HEAD@{43}: commit (amend): Create thrid and fourth files
+298533a refs/heads/main@{12}: commit: chore: Create third file and fourth files
+298533a HEAD@{44}: commit: chore: Create third file and fourth files
+991870d refs/heads/main@{13}: commit: chore: Create another file
+991870d HEAD@{45}: commit: chore: Create another file
+227e781 refs/heads/main@{14}: commit (amend): chore: Create initial file
+227e781 HEAD@{46}: commit (amend): chore: Create initial file
+9ad0fa5 refs/heads/main@{15}: commit (initial): chore: create initial file
+9ad0fa5 HEAD@{47}: commit (initial): chore: create initial file
+```
