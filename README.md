@@ -987,3 +987,34 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 98fa211 (HEAD -> main) Create initial and Second file
 9c06514 Create third and fourth files
 ```
+
+## Cherry-picking Commits
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git switch -c ft/branch
+Switched to a new branch 'ft/branch'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\test5.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m "Implemented test 5"
+[ft/branch 5c8076c] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+5c8076c (HEAD -> ft/branch) Implemented test 5
+98fa211 (main) Create initial and Second file
+9c06514 Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+* ft/branch
+  main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git cherry-pick 5c8076c
+[main 4bfcd4a] Implemented test 5
+ Date: Tue Sep 2 10:27:28 2025 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+4bfcd4a (HEAD -> main) Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+```
