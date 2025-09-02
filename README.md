@@ -890,3 +890,22 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 991870d chore: Create another file
 227e781 chore: Create initial file
 ```
+
+
+## Editing Commit History
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+477dcc1 (HEAD -> main) Create thrid and fourth files
+991870d chore: Create another file
+227e781 chore: Create initial file
+git rebase -i HEAD~2
+[detached HEAD fcf1a5d] chore: Create second file
+ Date: Tue Sep 2 07:47:03 2025 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+2342d2b (HEAD -> main) Create thrid and fourth files
+fcf1a5d chore: Create second file
+227e781 chore: Create initial file
+```
