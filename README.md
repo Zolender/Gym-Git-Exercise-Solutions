@@ -1347,3 +1347,22 @@ d015897 (HEAD -> ft/new-branch-from-commit) Implement another important feature
 98fa211 Create initial and Second file
 9c06514 Create third and fourth files
 ```
+
+## Branch Merging
+```bash 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\feature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"Update feature file"
+[ft/new-branch-from-commit 130520e] Update feature file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git merge ft/new-branch-from-commit
+Merge made by the 'ort' strategy.
+ feature.txt    | 3 ++-
+ newFeature.txt | 2 ++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 newFeature.txt
+```
+
