@@ -1229,3 +1229,20 @@ e1f23ed HEAD@{40}: rebase (reword): Create thrid and fourth files
 9ad0fa5 refs/heads/main@{15}: commit (initial): chore: create initial file
 9ad0fa5 HEAD@{47}: commit (initial): chore: create initial file
 ```
+
+
+### Git Advanced Exercises: Part 2
+
+## Feature Branch Creation
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+  ft/branch
+* main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git switch -c ft/new-feature
+Switched to a new branch 'ft/new-feature'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+  ft/branch
+* ft/new-feature
+  main
+```
