@@ -1279,3 +1279,71 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 98fa211 Create initial and Second file
 9c06514 Create third and fourth files
 ```
+## Branch Deletion
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git merge ft/new-feature
+Merge made by the 'ort' strategy.
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 0814319).
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+  ft/branch
+* main
+```
+
+## Creating a Branch from a Commit
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+50d7625 (HEAD -> main) Merge branch 'ft/new-feature'
+3202969 Update project readme
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout -b ft/new-branch-from-commit 0814319
+Switched to a new branch 'ft/new-branch-from-commit'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log ft/new-branch-from-commit 
+commit 08143191b11553a997d2239b56663a0b93b1bbb8 (HEAD -> ft/new-branch-from-commit)
+Author: Zolender <ndeingare@gmail.com>
+Date:   Wed Sep 3 09:35:56 2025 +0200
+
+    Implemented core functionality for new feature
+
+commit 4bfcd4a2ee0b67b630364564468a1ee7d058ba15
+Author: Zolender <ndeingare@gmail.com>
+Date:   Tue Sep 2 10:27:28 2025 +0200
+
+    Implemented test 5
+
+commit 98fa211818ec4511e2d9baab5b58ed70a3251a33
+Author: Zolender <ndeingare@gmail.com>
+Date:   Tue Sep 2 07:45:44 2025 +0200
+
+    Create initial and Second file
+
+commit 9c0651430113d463d54a8722b56e8320533266b3
+Author: Zolender <ndeingare@gmail.com>
+Date:   Tue Sep 2 10:07:25 2025 +0200
+
+    Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log ft/new-branch-from-commit --oneline
+0814319 (HEAD -> ft/new-branch-from-commit) Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\newFeature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"Implement another important feature    
+>> "
+[ft/new-branch-from-commit d015897] Implement another important feature
+ 1 file changed, 2 insertions(+)
+ create mode 100644 newFeature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+d015897 (HEAD -> ft/new-branch-from-commit) Implement another important feature
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+```
