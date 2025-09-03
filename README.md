@@ -1366,3 +1366,20 @@ Merge made by the 'ort' strategy.
  create mode 100644 newFeature.txt
 ```
 
+## Branch Rebasing
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+e05e826 (HEAD -> ft/new-branch-from-commit, main) Merge branch 'ft/new-branch-from-commit'
+130520e Update feature file
+d015897 Implement another important feature
+50d7625 Merge branch 'ft/new-feature'
+3202969 Update project readme
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+```
