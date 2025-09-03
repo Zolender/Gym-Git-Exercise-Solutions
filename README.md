@@ -1446,3 +1446,40 @@ d015897 Implement another important feature
 98fa211 Create initial and Second file
 9c06514 Create third and fourth files
 ```
+
+
+### Git Advanced Exercises Part 3: Advanced Workflows
+
+## Stashing changes
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\feature3.txt .\feature4.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   feature3.txt
+        new file:   feature4.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git stash
+Saved working directory and index state WIP on main: e05e826 Merge branch 'ft/new-branch-from-commit'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git stash list
+stash@{0}: WIP on main: e05e826 Merge branch 'ft/new-branch-from-commit'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch    
+  ft/branch
+  ft/improved-branch-name
+* main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git switch ft/branch
+Switched to branch 'ft/branch'
+```
+
+## Retriving Stashed Changes
+
+```bash 
+
+```
