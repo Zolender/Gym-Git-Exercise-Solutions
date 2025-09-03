@@ -1481,5 +1481,27 @@ Switched to branch 'ft/branch'
 ## Retriving Stashed Changes
 
 ```bash 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git switch main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git stash pop
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   feature3.txt
+        new file:   feature4.txt
+
+Dropped refs/stash@{0} (b7cf0e8196258d8ff3133039f3731d9ec4a9e75d)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"feat: add new features to the project" 
+
+[main 4b95eca] feat: add new features to the project
+ 2 files changed, 4 insertions(+)
+ create mode 100644 feature3.txt
+ create mode 100644 feature4.txt
 ```
+
+## 
