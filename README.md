@@ -1383,3 +1383,12 @@ d015897 Implement another important feature
 98fa211 Create initial and Second file
 9c06514 Create third and fourth files
 ```
+
+## Renaming Branches
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch -m ft/new-branch-from-commit ft/improved-branch-name
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+  ft/branch
+* ft/improved-branch-name
+  main
+```
