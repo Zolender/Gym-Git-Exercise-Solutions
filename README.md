@@ -1246,3 +1246,36 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 * ft/new-feature
   main
 ```
+
+## Working on The Feature Branch
+
+```bash 
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\feature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 0814319] Implemented core functionality for new feature
+1 file changed, 1 insertion(+)
+create mode 100644 feature.txt
+```
+
+## Switching Back and Making More Changes
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git switch main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git branch
+  ft/branch
+  ft/new-feature
+* main
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\readme.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m "Update project readme"
+[main 3202969] Update project readme
+ 1 file changed, 4 insertions(+)
+ create mode 100644 readme.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+3202969 (HEAD -> main) Update project readme
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+```
