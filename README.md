@@ -1392,3 +1392,57 @@ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Adv
 * ft/improved-branch-name
   main
 ```
+
+## Checking Out Detached HEAD
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+e05e826 (HEAD -> ft/improved-branch-name, main) Merge branch 'ft/new-branch-from-commit'
+130520e Update feature file
+d015897 Implement another important feature
+50d7625 Merge branch 'ft/new-feature'
+3202969 Update project readme
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout 50d7625
+Note: switching to '50d7625'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 50d7625 Merge branch 'ft/new-feature'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+50d7625 (HEAD) Merge branch 'ft/new-feature'
+3202969 Update project readme
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout e05e826
+Previous HEAD position was 50d7625 Merge branch 'ft/new-feature'
+HEAD is now at e05e826 Merge branch 'ft/new-branch-from-commit'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git log --oneline
+e05e826 (HEAD, main, ft/improved-branch-name) Merge branch 'ft/new-branch-from-commit'
+130520e Update feature file
+d015897 Implement another important feature
+50d7625 Merge branch 'ft/new-feature'
+3202969 Update project readme
+0814319 Implemented core functionality for new feature
+4bfcd4a Implemented test 5
+98fa211 Create initial and Second file
+9c06514 Create third and fourth files
+```
