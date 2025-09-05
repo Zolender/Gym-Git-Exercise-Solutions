@@ -1546,3 +1546,33 @@ CONFLICT (content): Merge conflict in index.html
 CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
+
+## Resolving merge conflicts with merge tool
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git config --global merge.tool vscode
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git config --global mergetool.vscode.cmd 'code --wait$MERGED'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\about.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"create an about us page for the project"
+[main 74cbbad] create an about us page for the project
+ 1 file changed, 24 insertions(+)
+ create mode 100644 about.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout ft/modify-page
+Switched to branch 'ft/modify-page'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rebase main  
+Successfully rebased and updated refs/heads/ft/modify-page.
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\about.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"update the about us page"
+[ft/modify-page 5f89202] update the about us page
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+ PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git push origin ft/modify-page 
+Enumerating objects: 63, done.
+Counting objects: 100% (63/63), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (62/62), done.
+Writing objects: 100% (63/63), 6.54 KiB | 145.00 KiB/s, done.
+Total 63 (delta 30), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (30/30), done.
+To https://github.com/Zolender/Exercises-Git_Advanced.git
+ * [new branch]      ft/modify-page -> ft/modify-page
+ 
+```
