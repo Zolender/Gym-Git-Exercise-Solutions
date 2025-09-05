@@ -1574,5 +1574,63 @@ Total 63 (delta 30), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (30/30), done.
 To https://github.com/Zolender/Exercises-Git_Advanced.git
  * [new branch]      ft/modify-page -> ft/modify-page
- 
+
+```
+
+
+## Ignoring files/Directories
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout main
+Already on 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git rm --cached .\feature.txt
+rm 'feature.txt'
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    feature.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\.gitignore
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        deleted:    feature.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature.txt
+        test/
+
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\.gitignore
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"update the git ignore file"
+[main 2f09a34] update the git ignore file
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+ create mode 100644 .gitignore
+ delete mode 100644 feature.txt
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
 ```
