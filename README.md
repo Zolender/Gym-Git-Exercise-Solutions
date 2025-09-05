@@ -1634,3 +1634,96 @@ Your branch is based on 'origin/main', but the upstream is gone.
 
 nothing to commit, working tree clean
 ```
+
+## Working with Tags 
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git tag v1.0
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\test\
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git add .\.gitignore            
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git commit -m"remove the test directory from the git ignore file"
+[main 1f1017a] remove the test directory from the git ignore file
+ 2 files changed, 1 deletion(-)
+ create mode 100644 test/testfile.html
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git tag v2.0
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git tag --list
+v1.0
+v2.0
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout v1.0
+Note: switching to 'v1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 2f09a34 update the git ignore file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout v2.0
+Previous HEAD position was 2f09a34 update the git ignore file
+HEAD is now at 1f1017a remove the test directory from the git ignore file
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git tag -d v2.0
+Deleted tag 'v2.0' (was 1f1017a)
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git tag --list
+v1.0
+```
+
+## Pushing to remote repository
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git push 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 667 bytes | 133.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/Zolender/Exercises-Git_Advanced/pull/new/main
+remote: 
+To https://github.com/Zolender/Exercises-Git_Advanced.git
+ * [new branch]      main -> main
+```
+
+## Pulling from remote repository
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.05 KiB | 31.00 KiB/s, done.
+From https://github.com/Zolender/Exercises-Git_Advanced
+   1b4e27f..42d1850  main       -> origin/main
+Updating 1f1017a..42d1850
+Fast-forward
+ index.html | 4 ++--
+ readme.txt | 4 +++-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+```
+
+OR
+
+```bash
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git fetch
+PS C:\Users\Eben\OneDrive - MSFT\Desktop\The Gym curriculum\Git learning\Git Advanced> git  merge
+Updating 42d1850..d45ba1c
+Fast-forward
+ readme.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
